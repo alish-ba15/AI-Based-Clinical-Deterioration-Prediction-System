@@ -1,92 +1,36 @@
-# 🩺 AI-Based Clinical Deterioration Prediction System
+# AI-Based Clinical Deterioration Prediction System
 
-This project presents a multi-generation deep learning framework for predicting clinical deterioration and sepsis using physiological data, sequential patient monitoring, and transformer-based clinical note analysis.
+A research/educational project exploring clinical deterioration prediction using structured physiological measurements, sequential models, and clinical-language-model methods. The repository currently contains three Jupyter notebooks:
 
----
+- [`DL_Assignment.ipynb`](DL_Assignment.ipynb)
+- [`dl_assignment.ipynb`](dl_assignment.ipynb)
+- [`Copy_of_DL_Assignment.ipynb`](Copy_of_DL_Assignment.ipynb)
 
-# 📁 Project Structure
+> **Important:** This project is for learning and research only. It is not a medical device, has not been validated for clinical use, and must not be used to diagnose patients or guide treatment.
 
-The project is divided into **3 notebooks**, where each notebook represents a different AI approach.
+## Project approaches
 
-## Generation 1 — DNN Baseline
+The project explores the following techniques (see the notebooks for the actual implementation and results):
 
-Focuses on:
+- Feed-forward deep neural networks for structured features
+- LSTM, GRU, and bidirectional LSTM approaches for sequential data
+- Bio_ClinicalBERT for clinical text
+- Class-imbalance handling, including SMOTE where appropriate
+- Evaluation using classification metrics and visualizations
 
-* Deep Neural Network (DNN)
-* Feature engineering
-* Optimizer comparison (SGD vs Adam)
-* SMOTE for class balancing
-* Clinical risk prediction using structured vitals
+The notebooks are coursework/experimentation artifacts and may not all contain identical or complete implementations. Treat their code and reported metrics as experimental results, not clinical evidence.
 
-### Features
+## Getting started
 
-* Shock Index
-* Pulse Pressure
-* Low Oxygen Flag
+1. Clone this repository and open it in Jupyter Notebook, JupyterLab, or Google Colab.
+2. Open a notebook and review its first cells for the dataset location and package imports.
+3. Install only the dependencies required by the notebook you intend to run.
+4. Configure the dataset path for your environment, then run cells in order.
 
-### Outputs
+The repository does not currently include a unified Python package, application entry point, dependency lockfile, or dataset. Dataset access and notebook-specific setup may therefore need to be configured separately. Do not commit patient data, credentials, or other sensitive information to this repository.
 
-* Accuracy
-* Precision
-* Recall
-* F1-score
-* Confusion Matrix
-* Loss/Accuracy Curves
+## Data, privacy, and responsible use
 
----
+Clinical and physiological data can contain sensitive personal information. Use only data you are authorized to access, follow the dataset's license and applicable privacy rules, and avoid storing identifiable data in notebooks or their outputs. Before sharing notebooks, inspect them for private paths, credentials, and sensitive output cells.
 
-## Generation 2 — Sequential Modeling
-
-Focuses on temporal patient monitoring using:
-
-* LSTM
-* GRU
-* Bidirectional LSTM (BiLSTM)
-
-### Includes
-
-* Sequential window generation
-* Transfer learning with pretrained recurrent weights
-* Training time comparison
-* Real-time vs retrospective analysis
-
----
-
-## Generation 3 — ClinicalBERT
-
-Focuses on transformer-based clinical NLP using:
-
-* Bio_ClinicalBERT
-
-### Includes
-
-* Clinical note tokenization
-* Frozen vs full fine-tuning
-* Attention visualization
-* Important clinical term extraction
-* Per-class deterioration analysis
-
-### Example Important Terms
-
-* respiratory
-* oxygen
-* temperature
-* heart rate
-* blood pressure
----
-
-# How to Run
-
-```bash
-git clone https://github.com/your-username/your-repository-name.git
-cd your-repository-name
-```
-
-Run notebooks:
-
-* `Generation1_DNN.ipynb`
-* `Generation2_SequentialModels.ipynb`
-* `Generation3_ClinicalBERT.ipynb`
-
-Department of Artificial Intelligence
-Faculty of Information & Computing Sciences
+Model performance can vary across populations, clinical settings, and data collection practices. Accuracy alone is not sufficient to assess a clinical prediction system; assess class-specific performance, calibration, data leakage, and external validity before making any research claims.
